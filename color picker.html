@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color picker</title>
+</head>
+<body style="background: beige;">
+    <div id="jide">
+    <select id="colour">
+        <option>default</option>
+        <option>Green</option>
+        <option>Magenta</option>
+        <option>Cyan</option>
+        <option>Blue</option>
+        <option>Grey</option>
+        <option>Red</option><br>
+        
+    </div>
+    </select><br>
+    <div id="button1">
+    <button onclick = "chosencolor()">Show color</button><br>
+    <input type="text" id="colours">
+    <span id="result"></span><br>
+</div>
+
+
+
+
+    <style>
+#jide
+{
+    text-align: center;
+    margin: 20px;
+    
+}
+#button1
+{
+font-size: 40px;
+font-weight: bold;
+}
+
+    </style>
+
+    <script>
+        function chosencolor(){
+        var ID= document.getElementById("colour");
+        var colorchosen = ID.options[ID.selectedIndex].text;
+       document.getElementById("colour")
+       document.getElementById("colours").value = colorchosen
+       document.getElementById("colours").style.fontsize= "17px"
+
+       if (colorchosen ==="Green"){
+           document.getElementById("colours").style.backgroundColor= "Green"
+           document.getElementById("result").innerHTML= ""
+       } else if (colorchosen ==="Magenta")  {
+        document.getElementById("colours").style.backgroundColor= "Magenta"
+        document.getElementById("result").innerHTML= ""
+       } else if (colorchosen ==="Cyan"){
+        document.getElementById("colours").style.backgroundColor= "Cyan"
+        document.getElementById("result").innerHTML= "" 
+       } else if (colorchosen ==="Blue"){
+        document.getElementById("colours").style.backgroundColor= "Blue"
+        document.getElementById("result").innerHTML= "" 
+       }else if (colorchosen ==="Grey"){
+        document.getElementById("colours").style.backgroundColor= "grey" 
+        document.getElementById("result").innerHTML= ""
+       }else if (colorchosen === "Red"){
+       document.getElementById("colours").style.backgroundColor= "Red"
+       document.getElementById("result").innerHTML= ""
+        }else if (colorchosen ==="default"){
+            document.getElementById("colours").style.backgroundColor= ""
+            document.getElementById("result").innerHTML ="select a color"
+        }
+    }
+    
+
+        </script>
+</body>
+</html>

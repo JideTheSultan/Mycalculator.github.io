@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Area calculator</title>
+</head>
+<body style="background-color: plum;">
+    <form>
+        <div id="jide">
+         <label for="fname" > length of rectangle</label><br>
+         <input type="text" id="fname" name="fname"><br>
+         <label for="lname"> width of rectangle:</label><br> 
+         <input type="text" id="lname" name="lname"><br>
+         <button type="button" onclick="calculatearea()" id="main">calculate area</button><br>
+         <span id="result"></span><br>
+         
+         </div>
+         
+
+
+         <style>
+#main
+{
+font-size: 40px;
+padding:10px;
+border-radius: 10px;
+margin:20px; 
+border: none;
+font-family: sans-serif;
+font-weight: bold;
+}
+#jide
+{
+width: 100%;
+padding: 7px;
+border: none;
+border-radius: 0.5rem;
+color: cyan;
+font-weight: bold;
+cursor: pointer;
+outline: none;
+text-align: center;
+}
+
+         </style>
+
+         <script>
+             function calculatearea(){
+                 var z = document.getElementById("fname").value
+                 var x = document.getElementById("lname").value
+                 var t = z*x
+                document.getElementById("result").innerHTML = "The area of the rectangle is " + " " + t
+             }
+         </script>
+         
+
+    </form>
+</body>
+</html>

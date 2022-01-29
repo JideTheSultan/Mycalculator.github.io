@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume Of A Sphere</title>
+ </head>
+  <body style="background-color: tomato;">
+      <div id="demo">
+          <div class="class"></div>
+    <label for="fname"> radius of sphere</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <button onclick="calculatevolume()" id="main">Calculate Volume</button><br>
+   <!-- <b id="demo">volume of the sphere is:</b><br> -->
+    <span id="jide"></span>
+    </div>
+<style>
+#main
+    {
+        font-size: 40px;
+padding:10px;
+border-radius: 10px;
+margin:20px; 
+border: none;
+font-family: sans-serif;
+font-weight: bold;
+color: purple;
+}
+#demo{
+width: 100%;
+padding: 7px;
+border: none;
+border-radius: 0.5rem;
+color: white;
+font-weight: bold;
+cursor: pointer;
+outline: none;
+text-align: center;
+}
+</style>
+
+    <script>
+         function calculatevolume(){
+            var r = document.getElementById("fname").value
+            document.getElementById("fname").innerHTML = Math.pow(r,3);
+            var p = 3.142;
+            var c = 4/3;
+            var t = c*p*r
+            document.getElementById("jide").innerHTML ="volume of the sphere is:"+ " " + t
+            document.querySelector("body").style.background= "tomato"
+            
+        }
+
+    </script>
+  </body>
+</html>
